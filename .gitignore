@@ -1,0 +1,13 @@
+# dependencies
+node_modules
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+.idea
+.DS_Store
+config
+/config
+.env
+
+
+files
+static
