@@ -11,7 +11,13 @@ const corsMiddleware=require("./middleware/cors.middleware");
 const authRouter = require("./routes/auth.routes");
 
 
-app.use(cors());
+const corsConfig = {
+    origin: '',
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE']
+}
+app.use(cors(corsConfig))
+app.options("", cors(corsConfig));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')))
